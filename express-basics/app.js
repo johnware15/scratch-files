@@ -9,6 +9,11 @@ app.use(cookieParser())
 
 app.set('view engine', 'pug')
 
+app.use('/one', (req, res, next) => {
+  console.log('One');
+  next();
+});
+
 //'.get' on app retrieves content from server
 //'/' first param = location parameter
 //second param => anonymous callback function
